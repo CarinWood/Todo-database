@@ -20,10 +20,10 @@ TodoRoutes.routes(app)
 app.use(helmet())
 app.use(morgan('common'))
 
-
+middlewares.apply(app)
 app.use(middlewares.notFound)
 app.use(middlewares.errorHandler)
-middlewares.apply(app)
+
 
 Configuration.connectToDatabase()
 Configuration.connectToPort(app)

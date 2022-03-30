@@ -11,7 +11,7 @@ const options = {
 
 const apply = (app) => {
     app.use(cors(options))
-    app.use(express.json())
+  
 }
 
 
