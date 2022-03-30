@@ -1,0 +1,19 @@
+@font-face {
+    font-family:  'Indie Flower';
+    src: url('../assets/fonts/IndieFlower-Regular.ttf');
+}
+
+.todo-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-headline {
+    font-family: 'Indie Flower';
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: goldenrod;
+}

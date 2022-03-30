@@ -1,0 +1,23 @@
+.task-input-field {
+    padding: 6px;
+    font-size: 20px;
+    width: 300px;
+    margin-right: 20px;
+ 
+ 
+}
+
+.name-input-field {
+    padding: 6px;
+    font-size: 20px;
+    margin-right: 20px;
+
+}
+
+.add-btn {
+    padding: 0px 3px;
+    font-size: 25px;
+    font-family: 'Indie Flower';
+    letter-spacing: 3px;
+    font-weight: 900;
+}

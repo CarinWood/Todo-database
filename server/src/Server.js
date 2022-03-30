@@ -15,12 +15,11 @@ dotenv.config()
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
-
-TodoRoutes.routes(app)
 app.use(helmet())
 app.use(morgan('common'))
 
 middlewares.apply(app)
+TodoRoutes.routes(app)
 app.use(middlewares.notFound)
 app.use(middlewares.errorHandler)
 

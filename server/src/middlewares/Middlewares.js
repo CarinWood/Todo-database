@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 import cors from 'cors'
-import express from 'express'
+
 
 dotenv.config()
 
@@ -11,6 +11,7 @@ const options = {
 
 const apply = (app) => {
     app.use(cors(options))
+    app.use(express.json())
   
 }
 

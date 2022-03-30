@@ -1,4 +1,5 @@
-import { Alive } from "./components/Alive";
+
+import Todo from "./components/todo/Todo";
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <Alive/>
+      <Todo/>
      
     </div>
   );
