@@ -3,9 +3,10 @@ import dotenv from 'dotenv'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import bodyParser from 'body-parser'
-import middlewares from './src/middlewares/Middlewares.js'
+import middlewares from './middlewares/Middlewares.js'
 import Configuration from './config/Configuration.js'
-import TodoRoutes from './src/routes/Todo.routes.js'
+import TodoRoutes from './routes/Todo.routes.js'
+
 
 
 

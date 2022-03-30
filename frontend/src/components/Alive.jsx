@@ -2,7 +2,6 @@ import AliveService from '../utils/api/services/AliveService.js'
 import {useState} from 'react'
 
 export const Alive = () => {
-
     const [data, setData] = useState('')
 
   const checkApiStatus = () => {
