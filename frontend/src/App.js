@@ -1,9 +1,15 @@
+import { Alive } from "./components/Alive";
 
 
 function App() {
+  
+
+
+
   return (
     <div className="App">
-      APP
+      <Alive/>
+     
     </div>
   );
 }

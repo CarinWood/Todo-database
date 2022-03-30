@@ -1,6 +1,20 @@
 import dotenv from 'dotenv'
+import cors from 'cors'
+import express from 'express'
 
 dotenv.config()
+
+const options = {
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE']
+}
+
+const apply = (app) => {
+    app.use(cors(options))
+    app.use(express.json())
+}
+
+
 
 
 const notFound = (req, res, next) => {
@@ -21,5 +35,6 @@ const errorHandler = (error, req, res, next) => {
 
 export default {
     notFound,
-    errorHandler
+    errorHandler,
+    apply
 }

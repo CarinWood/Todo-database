@@ -15,10 +15,6 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 
-app.get('/', (req, res) => {
-    res.send('API is Alive!')
-} )
-
 TodoRoutes.routes(app)
 app.use(helmet())
 app.use(morgan('common'))
@@ -26,6 +22,7 @@ app.use(morgan('common'))
 
 app.use(middlewares.notFound)
 app.use(middlewares.errorHandler)
+middlewares.apply(app)
 
 Configuration.connectToDatabase()
 Configuration.connectToPort(app)
