@@ -2,8 +2,7 @@
     padding: 6px;
     font-size: 20px;
     width: 300px;
-    margin-right: 20px;
- 
+    margin-right: 20px; 
  
 }
 
@@ -20,4 +19,23 @@
     font-family: 'Indie Flower';
     letter-spacing: 3px;
     font-weight: 900;
+    cursor: pointer;
+}
+
+.delete-input-text {
+    color: gray;
+    position: absolute;
+    left: 47.7%;
+    top: 15.8%;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.delete-input-name {
+    color: gray;
+    position: absolute;
+    top: 15.8%;
+    left: 63.2%;
+    font-size: 23px;
+    cursor: pointer;
 }
