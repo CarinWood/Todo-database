@@ -13,7 +13,7 @@ const createTodo = async (req, res) => {
 
             try {
 
-                const save = await todo.save()
+                await todo.save()
                 const response = await TodoModel.find()
                 res.status(201).send(response)
 
@@ -108,8 +108,9 @@ const updateTask = async (req,res) => {
 
 const deleteTodo = async (req, res) => {
     try {
-        const response = await TodoModel.findByIdAndDelete(req.params.todoId)
-        res.status(200).send({message: `Successfully deleted the Todo with the task: ${response.task} for name: ${response.name}`})
+        await TodoModel.findByIdAndDelete(req.params.todoId)
+        const response = await TodoModel.find()
+        res.status(201).send(response)
 
     } catch(error) {
         res.status(500).send({

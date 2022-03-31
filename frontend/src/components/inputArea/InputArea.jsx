@@ -33,6 +33,13 @@ const InputArea = ({setData}) => {
 
     })
     .catch(error => console.log(error))
+
+    clearAllFields()
+  }
+
+  function clearAllFields() {
+    setName('')
+    setTask('')
   }
 
   return (
