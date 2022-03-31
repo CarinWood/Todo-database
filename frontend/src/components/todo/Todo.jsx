@@ -9,7 +9,10 @@ const Todo = () => {
   return (
     <div className='todo-container'>
         <h1 className='todo-headline'> Todo List <BsPencilFill/></h1>
-            <InputArea/>
+            <InputArea setData={setData}/>
+            {data.map(obj => (
+         <h1>{obj.task}</h1>
+       ))}
     </div>
   )
 }

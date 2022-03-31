@@ -1,9 +1,10 @@
 import {useState} from 'react'
 import './inputArea.css'
 import { IoClose } from "react-icons/io5";
+import TodoApiService from '../../utils/api/services/TodoApiService';
 
-const InputArea = () => {
-
+const InputArea = ({setData}) => {
+ 
   const [task, setTask] = useState('')
   const [name, setName] = useState('')
 
@@ -14,6 +15,24 @@ const InputArea = () => {
 
   function clearName() {
     setName('')
+  }
+
+  function addTask() {
+
+    const newTodo = {
+      'name': name,
+      'task': task,
+      'done': false,
+    }
+
+    TodoApiService.createTodo(newTodo)
+    .then(response => {
+      setData(response.data)
+      
+    
+
+    })
+    .catch(error => console.log(error))
   }
 
   return (
@@ -37,7 +56,9 @@ const InputArea = () => {
         {name.length > 0 && <IoClose className='delete-input-name' onClick={clearName}/>}
 
 
-       <button className='add-btn'>Add</button>
+       <button className='add-btn' onClick={addTask}>Add</button>
+   
+      
     </div>
   )
 }

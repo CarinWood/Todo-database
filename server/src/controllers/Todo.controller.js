@@ -13,7 +13,8 @@ const createTodo = async (req, res) => {
 
             try {
 
-                const response = await todo.save()
+                const save = await todo.save()
+                const response = await TodoModel.find()
                 res.status(201).send(response)
 
             } catch (error) {
