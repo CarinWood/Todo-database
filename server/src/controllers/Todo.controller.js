@@ -93,13 +93,28 @@ const getUncompletedTodos = async (req, res) => {
 
 const updateTask = async (req,res) => {
     try {
-        const response = await TodoModel.findByIdAndUpdate(req.params.todoId, {
+        await TodoModel.findByIdAndUpdate(req.params.todoId, {
             task: req.body.task
         }, {new: true})
-
+       
+        const response = await TodoModel.find()
         res.status(200).send(response)
     } 
     
+    catch(error) {
+        res.status(500).send({message: error.message})
+    }
+}
+
+const updateDone = async (req, res) => {
+    try {
+        await TodoModel.findByIdAndUpdate(req.params.todoId, {
+            done: req.body.done
+        }, {new: true})
+        const response = await TodoModel.find()
+        res.status(200).send(response)
+    }
+
     catch(error) {
         res.status(500).send({message: error.message})
     }
@@ -120,6 +135,8 @@ const deleteTodo = async (req, res) => {
     }
 }
 
+
+
 export default {
     createTodo,
     getAllTodos,
@@ -128,5 +145,6 @@ export default {
     getCompletedTodos,
     getUncompletedTodos,
     updateTask,
+    updateDone,
     deleteTodo
 }

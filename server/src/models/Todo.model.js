@@ -4,7 +4,7 @@ const TodoSchema = new mongoose.Schema(
     {
         task: String,
         name: String,
-        done: Boolean
+        done: String
       
 
     }, {timestamps: true}

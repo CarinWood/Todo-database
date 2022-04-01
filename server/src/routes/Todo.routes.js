@@ -6,7 +6,7 @@ const routes = (app) => {
     app.get('/todo', TodoController.getAllTodos)
     app.get('/todo/:todoId', TodoController.getTodoById)
     app.get('/searchname/', TodoController.getTodoByNameQuery)
-    app.get('/done', TodoController.getCompletedTodos)
+    app.put('/done/:todoId', TodoController.updateDone)
     app.get('/uncompleted', TodoController.getUncompletedTodos)
     app.put('/todo/:todoId', TodoController.updateTask)
     app.delete('/todo/:todoId', TodoController.deleteTodo)

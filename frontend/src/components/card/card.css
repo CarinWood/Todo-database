@@ -7,12 +7,13 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid white;    
+      
 }
 
 .task {
     font-family: "Indian Flower";
     font-size: 35px;
+    letter-spacing: 3px;
     width: 300px;
 }
 
@@ -20,6 +21,7 @@
     font-family: "Indian Flower";
     width: 320px;
     font-size: 35px;
+    letter-spacing: 3px;
 
 }
 
@@ -37,4 +39,45 @@
     cursor: pointer;
     color: white;
     margin-right: 10px;
+}
+
+.edit-btn {
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    font-family: "Indian Flower";
+    font-size: 25px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 6px;
+    cursor: pointer;
+    color: white;
+    margin-right: 20px;
+
+}
+
+
+
+.checkmark {
+    color: green;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.point {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 30px;
+  
+}
+
+.linethrough {
+    text-decoration: line-through;
+    text-decoration-thickness: 3px;
+ 
+   
 }

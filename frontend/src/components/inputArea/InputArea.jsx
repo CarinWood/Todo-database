@@ -22,7 +22,7 @@ const InputArea = ({setData}) => {
     const newTodo = {
       'name': name,
       'task': task,
-      'done': false,
+      'done': 'false',
     }
 
     TodoApiService.createTodo(newTodo)

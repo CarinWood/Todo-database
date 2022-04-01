@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Indian Flower";
+    src: url('../assets/fonts/IndieFlower-Regular.ttf');
+}
+
+.window-wrapper {
+    width: 500px;
+    height: 300px;
+    background-color: black;
+    border: 5px outset goldenrod;
+    position: absolute;
+    top: 18%;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.update-text {
+    font-family: "Indian Flower";
+    font-size: 35px;
+    letter-spacing: 2px;
+
+
+}
+
+.update-task-field {
+    width: 220px;
+    font-size: 18px;
+}
+
+.dont-btn {
+    background-color: goldenrod;
+    font-family: "Indian Flower";
+    letter-spacing: 2px;
+    font-size: 22px;
+    font-weight: bolder;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+    padding: 1px 5px;
+}
+
+.reset-field {
+    color: gray;
+    position: absolute;
+    font-size: 25px;
+    top: 41%;
+    left: 67%;
+    cursor: pointer;
+}

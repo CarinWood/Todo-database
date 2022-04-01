@@ -8,7 +8,22 @@ const deleteTodo = (id) => {
     return http.delete(`/todo/${id}`)
 }
 
+const updateTask = (id, task) => {
+    return http.put(`/todo/${id}`, task)
+}
+
+const updateDone = (id, object) => {
+    return http.put(`/done/${id}`, object)
+}
+
+
+
+
+
 export default {
     createTodo,
-    deleteTodo
+    deleteTodo,
+    updateTask,
+    updateDone,
+    
 }
