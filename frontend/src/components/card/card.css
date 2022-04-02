@@ -15,6 +15,7 @@
     font-size: 35px;
     letter-spacing: 3px;
     width: 300px;
+    color: goldenrod;
 }
 
 .name {
@@ -22,6 +23,7 @@
     width: 320px;
     font-size: 35px;
     letter-spacing: 3px;
+    color: goldenrod;
 
 }
 
@@ -68,7 +70,7 @@
 }
 
 .point {
-    color: white;
+    color: goldenrod;
     font-size: 30px;
     cursor: pointer;
     margin-right: 30px;

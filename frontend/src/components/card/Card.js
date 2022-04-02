@@ -12,7 +12,7 @@ import { BsCheckLg } from "react-icons/bs";
 const Card = ({id, done, task, setData, name}) => {
 
     const [editMode, setEditMode] = useState(false)
-    const [isDone, setIsDone] = useState(false)
+   
 
     function deleteTodo(id) {
        TodoApiService.deleteTodo(id)
@@ -28,7 +28,7 @@ const Card = ({id, done, task, setData, name}) => {
     }
 
     function updateDone(id) {
-      setIsDone(true)
+      
       const object = {
         'done': true
       }
@@ -37,6 +37,7 @@ const Card = ({id, done, task, setData, name}) => {
       
       .then(response => {
         setData(response.data)
+        console.log(response.data)
       })
       .catch(error => console.log(error))
      
@@ -46,7 +47,7 @@ const Card = ({id, done, task, setData, name}) => {
 
 
     function updateDoneAgain(id) {
-      setIsDone(false)
+     
       
       
       const object = {
@@ -67,12 +68,12 @@ const Card = ({id, done, task, setData, name}) => {
   return (
     <div className='card-wrapper'>
     
-        {isDone === false 
-        ? <BsCheckLg className='point'  onClick={()=> updateDone(id)}/> 
-        : <BsCheckLg className="checkmark" onClick={() => {updateDoneAgain(id)}}/> }
-      
+        {done === 'false' && <BsCheckLg className='point' onClick={()=> updateDone(id)} />}
+        {done === 'true' && <BsCheckLg className='checkmark' onClick={() => {updateDoneAgain(id)}} />}
+       
      
-        <p className={isDone === true ? 'task linethrough' : 'task'}  >{task}</p>
+     
+        <p className={done === 'true' ? ' linethrough task' : 'task'}  >{task}</p>
         <p className='name'>{name}</p>
         <button className='edit-btn' onClick={editTask}><FaRegEdit/>Edit</button>
         <button className='delete-btn' onClick={()=> deleteTodo(id)}><GoTrashcan/>Del</button>

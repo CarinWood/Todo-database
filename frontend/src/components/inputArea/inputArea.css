@@ -1,3 +1,10 @@
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .task-input-field {
     padding: 6px;
     font-size: 20px;
@@ -38,4 +45,56 @@
     left: 63.2%;
     font-size: 23px;
     cursor: pointer;
+}
+
+.select {
+
+    font-size: 15px;
+  
+}
+
+.select-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.show {
+    font-family: "Indian Flower";
+    font-size: 25px;
+    color: goldenrod;
+    margin-right: 40px;
+    letter-spacing: 2px;
+}
+
+.all-section, .completed-section, .uncompleted-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.all-box, .completed-box, .uncompleted-box {
+    width: 10px;
+    height: 10px;
+    border: 1px solid goldenrod;
+    margin-right: 7px;
+    cursor: pointer;
+    position: relative;
+}
+
+.boxtext {
+    margin-right: 40px;
+    color: goldenrod;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.boxcheck {
+    color: green;
+    margin-bottom: 10px;
+    font-size: 33px;
+    position: absolute;
+    top: -140%;
+    left: -100%;
 }

@@ -8,6 +8,7 @@ const routes = (app) => {
     app.get('/searchname/', TodoController.getTodoByNameQuery)
     app.put('/done/:todoId', TodoController.updateDone)
     app.get('/uncompleted', TodoController.getUncompletedTodos)
+    app.get('/completed', TodoController.getCompletedTodos)
     app.put('/todo/:todoId', TodoController.updateTask)
     app.delete('/todo/:todoId', TodoController.deleteTodo)
     app.get('/', AliveController.apiAlive)

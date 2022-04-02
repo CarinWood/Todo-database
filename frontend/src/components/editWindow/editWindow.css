@@ -28,6 +28,8 @@
 .update-task-field {
     width: 220px;
     font-size: 18px;
+    color: grey;
+    font-family: "Indian Flower"
 }
 
 .dont-btn {

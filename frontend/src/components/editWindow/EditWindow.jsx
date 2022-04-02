@@ -5,7 +5,7 @@ import { IoClose } from "react-icons/io5";
 
 const EditWindow = ({setEditMode, setData, id, task}) => {
 
-    const [newTask, setNewTask] = useState('')
+    const [newTask, setNewTask] = useState(task)
 
     function setNewTodoTask(id, newTask) {
 
@@ -34,7 +34,7 @@ const EditWindow = ({setEditMode, setData, id, task}) => {
         className='update-task-field'
         onChange={e => setNewTask(e.target.value)} 
         type="text"
-        placeholder={task}
+        
         value={newTask}
         /> 
 
