@@ -2,6 +2,6 @@
 Todo-list with database
 
 
-## This is a project with a database, RestAPI and React.
+This is a project with a database, RestAPI and React.
 
-## Everything designed and developed by me
+Everything designed and developed by me
