@@ -8,7 +8,7 @@ const InputArea = ({setData}) => {
  
   const [task, setTask] = useState('')
   const [name, setName] = useState('')
-  const [all, setAll] = useState(false)
+  const [all, setAll] = useState(true)
   const [completed, setCompleted] = useState(false)
   const [uncompleted, setUncompleted] = useState(false)
 
@@ -77,8 +77,10 @@ const InputArea = ({setData}) => {
     setUncompleted(true)
 
     TodoApiService.getUncompleted()
-    .then(response =>
-      setData(response.data))
+    .then(response => {
+      setData(response.data)
+      console.log(response.data)
+    })
     .catch(error => console.log(error))
 
   }
