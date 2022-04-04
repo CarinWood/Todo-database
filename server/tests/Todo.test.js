@@ -118,7 +118,7 @@ const updateDone = () => {
     describe('Testing to update done to be true (PUT)', () => {
         it('expects to get an array with first object updated with done to true', (done) => {
             Chai.request(app)
-            .put(/todo/)
+            .put(/todo/newTodo._id)
             .end((error, response) => {
                 expect(response.status).to.equal(200)
                
