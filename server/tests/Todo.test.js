@@ -22,7 +22,7 @@ const anotherTodo = {
     done: 'false'
 }
 
-
+let createdTodo = {}
 
 
 const testingExistingRoute = () => {
@@ -62,6 +62,7 @@ const createTodo = () => {
 
                 const body = response.body
                 const todo = body[0]
+                createdTodo = todo
                 expect(todo.task).to.equal('Study')
                 expect(todo.name).to.equal('Carin')
                 expect(todo.done).to.equal('false')
@@ -101,7 +102,7 @@ const getAllTodos = () => {
     describe('Testing to to get all Todos (GET)', () => {
         it('expects to get an array with all objects', (done) => {
             Chai.request(app)
-            .get('/todo/')
+            .get(`/todo/${createdTodo._id}`)
             .end((error, response) => {
                 expect(response.status).to.equal(200)
 
