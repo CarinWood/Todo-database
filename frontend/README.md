@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+## Install following
+
+```shell
+
+   npm install react-icons
+   npm install axios
+   npm i -D nodemon
+   npm i cors
+   npm i express
+   npm i dotenv
+   npm i helmet
+   npm i morgan 
+   npm i mocha
+   npm i Chai
+```
+
+<details>
+<summary> ## Getting Started with Create React App </summary>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -67,3 +85,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+</details>

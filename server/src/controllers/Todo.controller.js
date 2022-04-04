@@ -39,32 +39,6 @@ const getAllTodos = async (req, res) => {
 
 }
 
-
-const getTodoById = async (req, res) => {
-    try {
-        const response = await TodoModel.findById(req.params.todoId)
-        res.status(200).send(response)
-    }
-
-    catch {
-        res.status(500).send({message: error.message})
-    }
-}
-
-
-const getTodoByNameQuery = async (req, res) => {
-    try {
-        const response = await TodoModel.find({name: req.query.name})
-        response.length !== 0
-        ? res.status(200).send(response)
-        : res.status(404).send({message: 'Could not find task assigned to: ' + req.query.name})
-    }
-
-    catch(error) {
-        res.status(500).send({message: error.message})
-    }
-}
-
 const getCompletedTodos = async (req, res) => {
     try {
         const response = await TodoModel.find({done: true})
@@ -140,8 +114,6 @@ const deleteTodo = async (req, res) => {
 export default {
     createTodo,
     getAllTodos,
-    getTodoById,
-    getTodoByNameQuery,
     getCompletedTodos,
     getUncompletedTodos,
     updateTask,

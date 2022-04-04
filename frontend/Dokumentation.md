@@ -22,6 +22,8 @@ Jag har valt att arbeta med det vi lärt oss under kursen och den kunskapen jag 
 
 Jag har inte valt att tillämpa Typescript i det här projektet då jag redan börjat koda i Javascript då förslaget kom upp. Jag tycker det är bättre att göra färdigt projektet så som det är påbörjat. Jag kommer eventuellt att göra ett likanande projekt med Typescript efteråt för att befästa mina kunskaper inom Typescript.
 
+Jag har valt att från backend alltid skicka med alla dokument som en array med den uppdatering som gjorts. Detta för att jag anser det lättare att skriva ut resultatet i frontend.  
+
 ## UX/UI
 
 Jag ville göra en lekfull design den här gången, därför valde jag att jobba med starka färger och en barnslig font. Resultatet blev ungefär som jag tänkt mig. Jag kanske kunde ha använt någonting annat än svart bakgrund, men jag kom inte riktigt på vad jag ville ha annars som gör att upplevelsen inte blir för rörig och för mycket.
@@ -79,6 +81,10 @@ Ett problem som uppstod under projektets gång var att jag skickade med en strä
 ## Felsökning
 
 De gånger jag har behövt felsöka har jag använt mig av console.log för att ta reda på hur koden körs och var det möjligtvis kan ha gått snett. Jag har också använt mig av metoden att jag har backat och byggt en liten bit i taget och få det att fungera för att sedan utöka koden i små steg.
+
+## Tester
+
+Kvaliteten och funktionaliteten på applikationen har säkerställts genom flertalet tester. Det har gjorts tester på endpoints i backend samt tester av samtliga componenter i frontend med tillfredställande resultat.
 
 ## Förslag på förbättringar
 
