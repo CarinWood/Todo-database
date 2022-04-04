@@ -26,6 +26,10 @@ const updateDonetoTrue = {
     done: 'true'
 }
 
+const newTask = {
+    task: 'Play video games'
+}
+
 let createdTodo = {}
 
 
@@ -169,6 +173,40 @@ const getUncompletedTodos = () => {
 }
 
 
+const updateTask = () => {
+    describe('Testing to update the task text (PUT)', () => {
+        it('expects to get an array with first object updated to new task', (done) => {
+            Chai.request(app)
+            .put(`/todo/${createdTodo._id}`)
+            .send(newTask)
+            .end((error, response) => {
+                expect(response.status).to.equal(200)
+                const body = response.body
+                const todo = body[0]
+                expect(todo.task).to.equal('Play video games')
+                done()
+            })
+        })
+    })
+}
+
+const deleteTodo = () => {
+    describe('Testing to delete a todo (DELETE)', () => {
+        it('expects to get an array with an object', (done) => {
+            Chai.request(app)
+            .delete(`/todo/${createdTodo._id}`)
+            .end((error, response) => {
+                expect(response.status).to.equal(201)
+                const body = response.body
+                const todo = body[0]
+                expect(body.length).to.equal(1)
+                expect(todo.name).to.equal('Carl')
+                done()
+            })
+        })
+    })
+}
+
 
 
 describe('TESTING TODO API ROUTES', () => {
@@ -180,5 +218,6 @@ describe('TESTING TODO API ROUTES', () => {
         updateDone()
         getCompletedTodos()
         getUncompletedTodos()
-
+        updateTask()
+        deleteTodo()
 })
