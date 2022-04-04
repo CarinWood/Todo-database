@@ -67,8 +67,6 @@ const createTodo = () => {
                 expect(todo.name).to.equal('Carin')
                 expect(todo.done).to.equal('false')
                 expect(body.length).to.equal(1)
-                console.log(todo)
-                console.log(todo._id)
                 done()
             })
         })
@@ -102,7 +100,7 @@ const getAllTodos = () => {
     describe('Testing to to get all Todos (GET)', () => {
         it('expects to get an array with all objects', (done) => {
             Chai.request(app)
-            .get(`/todo/${createdTodo._id}`)
+            .get('/todo/')
             .end((error, response) => {
                 expect(response.status).to.equal(200)
 
@@ -119,11 +117,12 @@ const updateDone = () => {
     describe('Testing to update done to be true (PUT)', () => {
         it('expects to get an array with first object updated with done to true', (done) => {
             Chai.request(app)
-            .put(/todo/newTodo._id)
+            .put(`/done/${createdTodo._id}`)
             .end((error, response) => {
                 expect(response.status).to.equal(200)
-               
-           
+                const body = response.body
+                const todo = body[0]
+                console.log(todo)
           
                 done()
             })
@@ -131,22 +130,7 @@ const updateDone = () => {
     })
 }
 
-const getCompletedTodos = () => {
-    describe('Testing to get all objects with done = true (GET)', () => {
-        it('expects to get an array with one object', (done) => {
-            Chai.request(app)
-            .get('/completed')
-            .end((error, response) => {
-                expect(response.status).to.equal(200)
-                const body = response.body
-                const todo = body[0]
-                expect(body.length).to.equal(1)
-                expect(todo.done).to.equal('true')
-                done()
-            })
-        })
-    })
-}
+
 
 
 describe('TESTING TODO API ROUTES', () => {
@@ -156,5 +140,4 @@ describe('TESTING TODO API ROUTES', () => {
         createAnotherTodo()
         getAllTodos()
         updateDone()
-        getCompletedTodos()
 })
