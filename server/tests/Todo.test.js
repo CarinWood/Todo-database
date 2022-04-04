@@ -22,6 +22,10 @@ const anotherTodo = {
     done: 'false'
 }
 
+const updateDonetoTrue = {
+    done: 'true'
+}
+
 let createdTodo = {}
 
 
@@ -118,12 +122,46 @@ const updateDone = () => {
         it('expects to get an array with first object updated with done to true', (done) => {
             Chai.request(app)
             .put(`/done/${createdTodo._id}`)
+            .send(updateDonetoTrue)
             .end((error, response) => {
                 expect(response.status).to.equal(200)
                 const body = response.body
                 const todo = body[0]
                 console.log(todo)
-          
+                
+                done()
+            })
+        })
+    })
+}
+
+const getCompletedTodos = () => {
+    describe('Testing to get all objects with done = true (GET)', () => {
+        it('expects to get an array with one object', (done) => {
+            Chai.request(app)
+            .get('/completed')
+            .end((error, response) => {
+                expect(response.status).to.equal(200)
+                const body = response.body
+                const todo = body[0]
+                expect(body.length).to.equal(1)
+                expect(todo.done).to.equal('true')
+                done()
+            })
+        })
+    })
+}
+const getUncompletedTodos = () => {
+    describe('Testing to get all objects with done = false (GET)', () => {
+        it('expects to get an array with an object', (done) => {
+            Chai.request(app)
+            .get('/uncompleted')
+            .end((error, response) => {
+                expect(response.status).to.equal(200)
+                const body = response.body
+                const todo = body[0]
+                expect(body.length).to.equal(1)
+                expect(todo.done).to.equal('false')
                 done()
             })
         })
@@ -140,4 +178,7 @@ describe('TESTING TODO API ROUTES', () => {
         createAnotherTodo()
         getAllTodos()
         updateDone()
+        getCompletedTodos()
+        getUncompletedTodos()
+
 })
