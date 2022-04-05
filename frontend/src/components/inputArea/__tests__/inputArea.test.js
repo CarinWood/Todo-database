@@ -16,6 +16,13 @@ test("Render button with correct text", () => {
   expect(button.textContent).toBe("Add");
 });
 
+test("Render button with correct className", () => {
+    const component = render(<InputArea/>)
+    const button = component.getByTestId("btn")
+
+    expect(button.className).toBe('add-btn')
+})
+
 test("Check if todo input renders correctly", () => {
   const component = render(<InputArea />);
   const taskInput = component.getByTestId("taskInput");
