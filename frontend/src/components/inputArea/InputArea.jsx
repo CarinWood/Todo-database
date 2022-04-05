@@ -67,6 +67,7 @@ const InputArea = ({setData}) => {
     TodoApiService.getCompleted()
     .then(response => {
       setData(response.data)
+      console.log(response.data)
     })
     .catch(error => console.log(error))
   }

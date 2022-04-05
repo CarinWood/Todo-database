@@ -41,10 +41,9 @@ const getAllTodos = async (req, res) => {
 
 const getCompletedTodos = async (req, res) => {
     try {
-        const response = await TodoModel.find({done: true})
-        response.length !== 0
-        ? res.status(200).send(response)
-        : res.status(404).send({message: 'Could not find task any tasks that is completed'})
+        const response = await TodoModel.find({done: 'true'})
+        res.status(200).send(response)
+       
     }
 
     catch(error) {
@@ -53,10 +52,8 @@ const getCompletedTodos = async (req, res) => {
 }
 const getUncompletedTodos = async (req, res) => {
     try {
-        const response = await TodoModel.find({done: false})
-        response.length !== 0
-        ? res.status(200).send(response)
-        : res.status(404).send({message: 'Could not find task any tasks that is uncompleted'})
+        const response = await TodoModel.find({done: 'false'})
+        res.status(200).send(response)
     }
 
     catch(error) {
