@@ -67,7 +67,6 @@ const InputArea = ({setData}) => {
     TodoApiService.getCompleted()
     .then(response => {
       setData(response.data)
-      console.log(response.data)
     })
     .catch(error => console.log(error))
   }
@@ -80,16 +79,16 @@ const InputArea = ({setData}) => {
     TodoApiService.getUncompleted()
     .then(response => {
       setData(response.data)
-      console.log(response.data)
     })
     .catch(error => console.log(error))
 
   }
 
   return (
-    <div className='input-fields'>
+    <div className='input-fields' data-testid='first-div'>
       <div className='input-area'>
        <input 
+          data-testid="taskInput"
           className='task-input-field' 
           placeholder="Things you want to do today?" 
           type="text"
@@ -99,7 +98,8 @@ const InputArea = ({setData}) => {
         {task.length > 0 && <IoClose className='delete-input-text' onClick={clearField}/>}
 
 
-       <input 
+       <input
+          data-testid='name-input' 
           className='name-input-field' 
           placeholder="Your name" type="text" 
           value={name}
@@ -108,7 +108,7 @@ const InputArea = ({setData}) => {
         {name.length > 0 && <IoClose className='delete-input-name' onClick={clearName}/>}
 
 
-       <button className='add-btn' onClick={addTask}>Add</button>
+       <button data-testid="btn" className='add-btn' onClick={addTask}>Add</button>
        </div>
 
        <div className='select-area'> 

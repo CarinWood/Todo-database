@@ -9,7 +9,7 @@ const Todo = () => {
 
   return (
     <div className='todo-container'>
-        <h1 className='todo-headline'> Todo List <BsPencilFill/></h1>
+        <h1 className='todo-headline' data-testid="headline">Todo List<BsPencilFill/></h1>
             <InputArea setData={setData}/>
             {data.map(obj => (
                     <Card 
