@@ -32,9 +32,6 @@ const InputArea = ({setData}) => {
     TodoApiService.createTodo(newTodo)
     .then(response => {
       setData(response.data)
-      
-    
-
     })
     .catch(error => console.log(error))
 
@@ -56,7 +53,6 @@ const InputArea = ({setData}) => {
       setData(response.data)
     })
     .catch(error => console.log(error))
-
   }
 
   function showCompleted() {
@@ -86,29 +82,30 @@ const InputArea = ({setData}) => {
 
   return (
     <div className='input-fields' data-testid='first-div'>
+      
       <div className='input-area'>
-       <input 
-          data-testid="taskInput"
-          className='task-input-field' 
-          placeholder="Things you want to do today?" 
-          type="text"
-          value={task}
-          onChange={e => setTask(e.target.value)}
-        />
-        {task.length > 0 && <IoClose className='delete-input-text' onClick={clearField}/>}
+          <input 
+              data-testid="taskInput"
+              className='task-input-field' 
+              placeholder="Things you want to do today?" 
+              type="text"
+              value={task}
+              onChange={e => setTask(e.target.value)}
+            />
+            {task.length > 0 && <IoClose className='delete-input-text' onClick={clearField}/>}
 
 
-       <input
-          data-testid='name-input' 
-          className='name-input-field' 
-          placeholder="Your name" type="text" 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-       />
-        {name.length > 0 && <IoClose className='delete-input-name' onClick={clearName}/>}
+          <input
+              data-testid='name-input' 
+              className='name-input-field' 
+              placeholder="Your name" type="text" 
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+          />
+            {name.length > 0 && <IoClose className='delete-input-name' onClick={clearName}/>}
 
 
-       <button data-testid="btn" className='add-btn' onClick={addTask}>Add</button>
+          <button data-testid="btn" className='add-btn' onClick={addTask}>Add</button>
        </div>
 
        <div className='select-area'> 

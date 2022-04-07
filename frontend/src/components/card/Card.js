@@ -7,28 +7,23 @@ import EditWindow from '../editWindow/EditWindow';
 import { BsCheckLg } from "react-icons/bs";
 
 
-
-
 const Card = ({id, done, task, setData, name}) => {
 
     const [editMode, setEditMode] = useState(false)
    
-
     function deleteTodo(id) {
        TodoApiService.deleteTodo(id)
-       .then(response => {
-        setData(response.data)
-       })
-       .catch(error => console.log(error))
+        .then(response => {
+          setData(response.data)
+        })
+        .catch(error => console.log(error))
     }
 
     function editTask() {
-        setEditMode(true)
-        
+        setEditMode(true)   
     }
 
     function updateDone(id) {
-      
       const object = {
         'done': true
       }
@@ -40,16 +35,10 @@ const Card = ({id, done, task, setData, name}) => {
         console.log(response.data)
       })
       .catch(error => console.log(error))
-     
     }
 
 
-
-
     function updateDoneAgain(id) {
-     
-      
-      
       const object = {
         'done': false
       }
@@ -58,12 +47,9 @@ const Card = ({id, done, task, setData, name}) => {
       .then(response => {
         setData(response.data)
       })
-      .catch(error => console.log(error))
-     
+      .catch(error => console.log(error))    
     }
     
-
-
 
   return (
     <div className='card-wrapper'>
@@ -79,7 +65,6 @@ const Card = ({id, done, task, setData, name}) => {
         <button className='delete-btn' onClick={()=> deleteTodo(id)}><GoTrashcan/>Del</button>
 
         {editMode === true && <EditWindow setEditMode={setEditMode} setData={setData} id={id} task={task}/> }
-    
     </div>
   )
 }

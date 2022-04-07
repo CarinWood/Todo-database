@@ -6,8 +6,7 @@
 .card-wrapper {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
-      
+    align-items: center;     
 }
 
 .task {
@@ -15,9 +14,7 @@
     font-size: 30px;
     letter-spacing: 3px;
     width: 280px;
-    color: goldenrod;
-    
-    
+    color: goldenrod;   
 }
 
 .name {
@@ -26,8 +23,6 @@
     font-size: 30px;
     letter-spacing: 3px;
     color: goldenrod;
-  
-
 }
 
 .delete-btn {
@@ -60,10 +55,7 @@
     cursor: pointer;
     color: white;
     margin-right: 20px;
-
 }
-
-
 
 .checkmark {
     color: green;
@@ -76,13 +68,10 @@
     color: goldenrod;
     font-size: 30px;
     cursor: pointer;
-    margin-right: 30px;
-  
+    margin-right: 30px; 
 }
 
 .linethrough {
     text-decoration: line-through;
-    text-decoration-thickness: 3px;
- 
-   
+    text-decoration-thickness: 3px;  
 }

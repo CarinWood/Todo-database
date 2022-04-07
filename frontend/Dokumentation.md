@@ -1,26 +1,11 @@
 
 # Todo Databasprojekt
 
-## Installera följande
-
-```shell
-   npm install react-icons
-   npm install axios
-   npm i -D nodemon
-   npm i cors
-   npm i express
-   npm i dotenv
-   npm i helmet
-   npm i morgan 
-   npm i mocha
-   npm i Chai
-```
-
 ## Min kodlösning
 
 Jag har valt att arbeta med det vi lärt oss under kursen och den kunskapen jag tagit till mig från kursen i webserverprogrammering 1 samt mina kunskaper i React. Jag har använt mig av vanilla CSS och endast React icons som extra paket. Jag har valt att arbeta med befintliga kunskaper och fokusera på det nya med databaser istället för att blanda in annat jag inte riktigt har koll på för att säkerställa att projektet hinns med inom en rimlig tidsram.
 
-Jag har inte valt att tillämpa Typescript i det här projektet då jag redan börjat koda i Javascript då förslaget kom upp. Jag tycker det är bättre att göra färdigt projektet så som det är påbörjat. Jag kommer eventuellt att göra ett likanande projekt med Typescript efteråt för att befästa mina kunskaper inom Typescript.
+Jag har inte valt att tillämpa Typescript i det här projektet då jag redan börjat koda i Javascript då förslaget kom upp. Jag tyckte att det var bättre att göra färdigt projektet så som det var påbörjat. Jag kommer eventuellt att göra ett likanande projekt med Typescript efteråt för att befästa mina kunskaper inom Typescript.
 
 Jag har valt att från backend alltid skicka med alla dokument som en array med den uppdatering som gjorts. Detta för att jag anser det lättare att skriva ut resultatet i frontend.  
 
@@ -32,7 +17,7 @@ Vad gäller användarvänligheten tror jag att jag har lyckats med att göra den
 
 ## Utvärdering
 
-Min todo-lista fungerar som planerat och projektet gick lätt att genomföra utan några större svårigheter. Det svåraste har varit att utföra operationerna från frontend till backend, då det är så många steg för att allt ska fungera. Det har ändå varit ett relativt enkelt projekt då det är precis likadant om projektet för webbserverprogrammering, med skillnaden att man använder en databas istället.
+Min todo-lista fungerar som planerat och projektet gick lätt att genomföra utan några större svårigheter. Det svåraste har varit att utföra operationerna mellan frontend och backend, då det är så många steg för att allt ska fungera. Det har ändå varit ett relativt enkelt projekt då det är precis likadant om projektet för webbserverprogrammering, med skillnaden att man använder en databas istället.
 
 Jag har lärt mig hur databaser fungerar, skillnaden mellan olika databaser, samt lärt mig att använda Mongoose. Jag tror att jag kommer att ha stor användning för kunskaper om databaser i mitt framtida yrkesliv då databaser finns på många olika ställen i allt från produkter på webbshoppar till listor över anställda i ett företag.
 
@@ -93,4 +78,3 @@ Jag kunde kanske ha lagt ned mer tid på designen, färgerna och utformningen. J
 ## Resultat
 
 Jag är i det stora hela nöjd med resultatet av projektet. Det är en fullt fungerande todo list och koden är strukturerad i komponenter och separata filer. Det sparsamma användargränssnittet gör att det är lätt att hitta fält att skriva i och knappar och gör det lätt för användaren att förstå hur applikationen fungerar.
-

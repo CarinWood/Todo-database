@@ -8,34 +8,26 @@ const EditWindow = ({setEditMode, setData, id, task}) => {
     const [newTask, setNewTask] = useState(task)
 
     function setNewTodoTask(id, newTask) {
-
       const task = {
         'task': newTask
       }
-
         TodoApiService.updateTask(id, task)
         .then(response => {
-         
-            setData(response.data)
-            
+            setData(response.data)     
         })
         .catch(error => console.log(error))
-        setEditMode(false)
- 
-       
+        setEditMode(false)  
     }
-
     
 
   return (
     <div className='window-wrapper'>
         <p className="update-text">Update task:</p>
         <input
-        className='update-task-field'
-        onChange={e => setNewTask(e.target.value)} 
-        type="text"
-        
-        value={newTask}
+            className='update-task-field'
+            onChange={e => setNewTask(e.target.value)} 
+            type="text"
+            value={newTask}
         /> 
 
           {newTask.length > 0 && <IoClose className='reset-field' onClick={() => setNewTask('')}/>} 
