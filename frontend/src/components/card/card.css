@@ -75,3 +75,13 @@
     text-decoration: line-through;
     text-decoration-thickness: 3px;  
 }
+
+@media screen and (max-width: 430px) {
+    .task {
+        width: 180px;
+    }
+
+    .name {
+        width: 100px;
+    }
+}

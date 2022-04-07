@@ -53,3 +53,26 @@
     left: 67%;
     cursor: pointer;
 }
+
+@media screen and (max-width: 811px) {
+    .window-wrapper {
+        left: 20%;
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+    .window-wrapper {
+        width: 350px;
+        height: 300px;
+        background-color: black;
+        border: 5px outset goldenrod;
+        position: absolute;
+        top: 18%;
+        left: 9%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
