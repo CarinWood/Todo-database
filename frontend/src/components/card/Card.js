@@ -61,8 +61,8 @@ const Card = ({id, done, task, setData, name}) => {
      
         <p className={done === 'true' ? ' linethrough task' : 'task'}  >{task}</p>
         <p className='name'>{name}</p>
-        <button className='edit-btn' onClick={editTask}><FaRegEdit/>Edit</button>
-        <button className='delete-btn' onClick={()=> deleteTodo(id)}><GoTrashcan/>Del</button>
+        <button className='edit-btn' onClick={editTask}><FaRegEdit className="edit"/>Edit</button>
+        <button className='delete-btn' onClick={()=> deleteTodo(id)}><GoTrashcan className='trash'/>Del</button>
 
         {editMode === true && <EditWindow setEditMode={setEditMode} setData={setData} id={id} task={task}/> }
     </div>

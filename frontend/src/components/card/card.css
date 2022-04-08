@@ -77,11 +77,42 @@
 }
 
 @media screen and (max-width: 430px) {
+    .card-wrapper {
+        margin-top: 10px;
+        width: 92%;
+       
+    }
+
     .task {
-        width: 180px;
+        width: 160px;
+        font-size: 15px;
+     
     }
 
     .name {
-        width: 100px;
+        width: 130px;
+        font-size: 15px;
+      
+    }
+
+    .edit-btn, .delete-btn {
+        font-size: 15px;
+   
+    }
+
+    .point, .checkmark {
+        font-size: 18px;
+        margin-right: 10px;
+        
+    }
+
+    .linethrough {
+        text-decoration-thickness: 1px;  
+    }
+
+    .edit, .trash {
+        visibility: hidden;
+        position: absolute;
+        top: - 1000px;
     }
 }
