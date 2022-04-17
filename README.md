@@ -1,6 +1,6 @@
 # Todo-database
 
-Todo-list with database
+Todo-list application
 
 This is a project with a database, RestAPI and React.
 

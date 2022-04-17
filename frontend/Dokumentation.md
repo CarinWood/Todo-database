@@ -1,9 +1,14 @@
 
 # Todo Databasprojekt
 
+## Projektplanering
+
+Jag planerade mitt arbete i Trello som jag sedan utförde steg för steg.
+[Länk till planering i Trello](https://trello.com/b/ms9O4izf/todo-databas)
+
 ## Min kodlösning
 
-Jag har valt att arbeta med det vi lärt oss under kursen och den kunskapen jag tagit till mig från kursen i webserverprogrammering 1 samt mina kunskaper i React. Jag har använt mig av vanilla CSS och endast React icons som extra paket. Jag har valt att arbeta med befintliga kunskaper och fokusera på det nya med databaser istället för att blanda in annat jag inte riktigt har koll på för att säkerställa att projektet hinns med inom en rimlig tidsram.
+Jag har valt att arbeta med det vi lärt oss under kursen och den kunskapen jag tagit till mig från kursen i webserverprogrammering 1 samt mina kunskaper i React. Jag har använt mig av vanilla CSS och endast React icons som extra npm-paket. Jag har valt att arbeta med befintliga kunskaper och fokusera på det nya med databaser istället för att blanda in annat jag inte riktigt har koll på för att säkerställa att projektet hinns med inom en rimlig tidsram.
 
 Jag har inte valt att tillämpa Typescript i det här projektet då jag redan börjat koda i Javascript då förslaget kom upp. Jag tyckte att det var bättre att göra färdigt projektet så som det var påbörjat. Jag kommer eventuellt att göra ett likanande projekt med Typescript efteråt för att befästa mina kunskaper inom Typescript.
 
@@ -13,7 +18,7 @@ Jag har valt att från backend alltid skicka med alla dokument som en array med 
 
 Jag ville göra en lekfull design den här gången, därför valde jag att jobba med starka färger och en barnslig font. Resultatet blev ungefär som jag tänkt mig. Jag kanske kunde ha använt någonting annat än svart bakgrund, men jag kom inte riktigt på vad jag ville ha annars som gör att upplevelsen inte blir för rörig och för mycket.
 
-Vad gäller användarvänligheten tror jag att jag har lyckats med att göra den enkel för en användare att förstå hur applikationen fungerar. Det är inte svårt att se på sidan vad man ska göra, knapparna är stora och tydliga och talar om vad som händer när man klickar på dem.
+Vad gäller användarvänligheten tycker jag att jag har lyckats med att göra den enkel för en användare att förstå hur applikationen fungerar. Det är inte svårt att se på sidan vad man ska göra, knapparna är stora och tydliga och talar om vad som händer när man klickar på dem.
 
 ## Utvärdering
 
@@ -69,7 +74,7 @@ De gånger jag har behövt felsöka har jag använt mig av console.log för att 
 
 ## Tester
 
-Kvaliteten och funktionaliteten på applikationen har säkerställts genom flertalet tester. Det har gjorts tester på endpoints i backend samt tester av samtliga componenter i frontend med tillfredställande resultat.
+Kvaliteten och funktionaliteten på applikationen har säkerställts genom flertalet tester. Det har gjorts tester på endpoints i backend samt tester av komponenter i frontend med tillfredställande resultat.
 
 ## Förslag på förbättringar
 
