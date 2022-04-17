@@ -85,9 +85,10 @@ const InputArea = ({setData}) => {
       
       <div className='input-area'>
           <input 
+              maxLength={24}
               data-testid="taskInput"
               className='task-input-field' 
-              placeholder="Things you want to do today?" 
+              placeholder="Your task" 
               type="text"
               value={task}
               onChange={e => setTask(e.target.value)}

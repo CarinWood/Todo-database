@@ -25,6 +25,7 @@ const EditWindow = ({setEditMode, setData, id, task}) => {
         <p className="update-text">Update task:</p>
         <input
             className='update-task-field'
+            maxLength={24}
             onChange={e => setNewTask(e.target.value)} 
             type="text"
             value={newTask}
@@ -32,7 +33,7 @@ const EditWindow = ({setEditMode, setData, id, task}) => {
 
           {newTask.length > 0 && <IoClose className='reset-field' onClick={() => setNewTask('')}/>} 
         
-        <button onClick={()=>setNewTodoTask(id, newTask)} className='dont-btn'>Done</button>
+        <button onClick={()=>setNewTodoTask(id, newTask)} className='done-btn'>Done</button>
     </div>
   )
 }

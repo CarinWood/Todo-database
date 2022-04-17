@@ -7,15 +7,20 @@
 
 .task-input-field {
     padding: 6px;
-    font-size: 20px;
-    width: 300px;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    width: 280px;
     margin-right: 20px; 
     
 }
 
 .name-input-field {
     padding: 6px;
-    font-size: 20px;
+    width: 120;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
     margin-right: 20px;
 }
 
@@ -31,7 +36,7 @@
 .delete-input-text {
     color: gray;
     position: absolute;
-    left: 47.7%;
+    left: 45.8%;
     top: 15.8%;
     font-size: 23px;
     cursor: pointer;
@@ -41,13 +46,12 @@
     color: gray;
     position: absolute;
     top: 15.8%;
-    left: 63.2%;
+    left: 64%;
     font-size: 23px;
     cursor: pointer;
 }
 
 .select {
-
     font-size: 15px;
   
 }
@@ -56,6 +60,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 25px;
+    border-bottom: 1px solid goldenrod;
+    margin-bottom: 30px;
+    margin-top: 20px;
   
 }
 
@@ -64,7 +72,7 @@
     font-size: 25px;
     color: goldenrod;
     margin-right: 40px;
-    letter-spacing: 2px;
+    letter-spacing: 2.4px;
     font-weight: 800;
 }
 
@@ -86,8 +94,9 @@
 .boxtext {
     margin-right: 40px;
     color: goldenrod;
-    font-size: 15px;
-    letter-spacing: 1px;
+    font-size: 25px;
+    letter-spacing: 2.6px;
+    font-family: "Indian Flower";
 }
 
 .boxcheck {

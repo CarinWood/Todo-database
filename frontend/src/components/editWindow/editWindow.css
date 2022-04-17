@@ -25,13 +25,15 @@
 }
 
 .update-task-field {
-    width: 220px;
-    font-size: 18px;
-    font-weight: 900;
-    color: grey;
+    width: 280px;
+    padding: 5px;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: black;
 }
 
-.dont-btn {
+.done-btn {
     background-color: goldenrod;
     font-family: "Indian Flower";
     letter-spacing: 2px;
@@ -49,8 +51,8 @@
     color: gray;
     position: absolute;
     font-size: 25px;
-    top: 41%;
-    left: 67%;
+    top: 42.8%;
+    left: 72.9%;
     cursor: pointer;
 }
 

@@ -39,6 +39,5 @@ export default {
     updateDone,
     getUncompleted,
     getCompleted,
-    getAll
-    
+    getAll   
 }

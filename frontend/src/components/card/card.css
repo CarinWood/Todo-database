@@ -6,7 +6,9 @@
 .card-wrapper {
     display: flex;
     justify-content: flex-start;
-    align-items: center;     
+    align-items: center; 
+    margin-bottom: 30px;  
+
 }
 
 .task {
@@ -15,6 +17,7 @@
     letter-spacing: 3px;
     width: 280px;
     color: goldenrod;   
+    margin-right: 30px;
 }
 
 .name {
@@ -30,7 +33,7 @@
     border: none;
     border-radius: 5px;
     font-family: "Indian Flower";
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -38,7 +41,11 @@
     padding: 2px 6px;
     cursor: pointer;
     color: white;
-    margin-right: 10px;
+    margin-right: 15px;
+}
+
+.trash {
+    margin-right: 5px;
 }
 
 .edit-btn {
@@ -46,7 +53,7 @@
     border: none;
     border-radius: 5px;
     font-family: "Indian Flower";
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -57,18 +64,22 @@
     margin-right: 20px;
 }
 
+.edit {
+    margin-right: 7px; 
+}
+
 .checkmark {
     color: green;
     font-size: 30px;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 35px;
 }
 
 .point {
     color: goldenrod;
     font-size: 30px;
     cursor: pointer;
-    margin-right: 30px; 
+    margin-right: 35px; 
 }
 
 .linethrough {

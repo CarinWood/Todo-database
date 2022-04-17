@@ -1,5 +1,8 @@
-import dotenv from 'dotenv'
 import cors from 'cors'
+import dotenv from 'dotenv'
+import helmet from 'helmet'
+import morgan from 'morgan'
+import express from 'express'
 
 
 dotenv.config()
@@ -11,11 +14,10 @@ const options = {
 
 const apply = (app) => {
     app.use(cors(options))
-  
+    app.use(helmet())
+    app.use(morgan('common'))
+    app.use(express.json())
 }
-
-
-
 
 const notFound = (req, res, next) => {
     const error = new Error (`Not found: ${req.originalUrl}`)

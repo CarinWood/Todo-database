@@ -1,9 +1,10 @@
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 
+const port = process.env.PORT
+
 
 dotenv.config()
-const port = process.env.PORT
 
 
 const connectToDatabase = async () => {
